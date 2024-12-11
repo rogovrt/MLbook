@@ -1,44 +1,5 @@
-\documentclass[a4paper, 14pt]{article}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel} 
-
-\title{Простые эвристические методы частичного обучения: self-training, co-training, co-learning.}
-\author{Николаев Андрей}
-%\date{22 ноября 2020}
-
-\usepackage{natbib}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{xcolor}
-
-\usepackage{booktabs}
-
-\renewcommand{\familydefault}{\sfdefault}
-
-\usepackage{mathtools}
-\usepackage{amsfonts}
-
-\renewcommand{\sinh}{\text{sh}}
-\renewcommand{\cosh}{\text{ch}}
-\renewcommand{\tanh}{\text{th}}
-\renewcommand{\tan}{\text{tg}}
-\renewcommand{\arctan}{\text{arctg}}
-
-\newcommand{\bounds}{\left[2;3\right]}
-\newcommand{\upperbound}{3}
-\newcommand{\lowerbound}{2}
-
-\newcommand{\myoperator}{(Af)(x) = -(x^2+4)f''(x)-2xf'(x)}
-\newcommand{\myarea}{\left \{ f \in W^{2,2}\left(\bounds\right): \quad f\left(\lowerbound\right) = \pi f'\left(\lowerbound\right), \quad f'(\upperbound) = 0 \right \}}
-
-\title{Простые эвристические методы частичного обучения: self-training, co-training, co-learning.}
-\author{Николаев Андрей}
-%\date{Вариант 7}
-
 \begin{document}
-\maketitle
-\section{Частичное обучение}
+\section{Простые эвристические методы частичного обучения}
 \subsection{Постановка задачи}
 Существует привычная нам задача классификации. Мы имеем $X$ --- множество объектов с известными признаками и $Y$ --- пространство классов. Есть неизвестная функция $X \longrightarrow Y$, сопоставляющая каждому обьекту его класс. Имеется обучающая выборка $\{x_1, x_2, ...\} \subset X$ и соответствующие им известные классы $\{y_1, y_2, ...\} \subset Y$. Задача классификации сводится к построению классификатора --- некой аппроксимации неизвестной функции $X \longrightarrow Y$. \\
 
