@@ -1,41 +1,3 @@
-\documentclass[a4paper,12pt]{article}
-
-
-% import main packages
-\usepackage[cm]{fullpage}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
-\usepackage[document]{ragged2e}
-\usepackage{amsmath,amsfonts,amssymb,mathtools}
-\usepackage{bbold}
-\usepackage{comment}
-% import tikz stuff
-\usepackage{tikz}
-\usetikzlibrary{arrows,automata,positioning,fit,shapes}
-\usepackage{systeme}
-\usepackage[linguistics]{forest}
-% define commands
-\newcommand{\bigline}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
-\newcommand{\la}{\leftarrow}
-\newcommand{\ra}{\rightarrow}
-\renewcommand{\epsilon}{\varepsilon}
-\renewcommand{\phi}{\varphi}
-\renewcommand{\leq}{\leqslant}
-\renewcommand{\geq}{\geqslant}
-% lipsum
-\usepackage{lipsum}
-
-\title{\textbf{
-    Bias-Variance decomposition \\
-      }}
-\author{Бунин Кирилл Андреевич, Б05-203}
-\date{Dec 10, 2024}
-
-
-\begin{document}
-
-\maketitle
 
 \section*{Задача 1}
 
@@ -227,9 +189,3 @@ L(\mu) = \underbrace{\mathbb{E}_{x, y} \left[ \left( y - \mathbb{E}[y \mid x] \r
 
 
 Рассмотрим подробнее компоненты полученного разложения ошибки. Первая компонента характеризует \emph{шум} (\emph{noise}) в данных и равна ошибке идеального алгоритма. Невозможно построить алгоритм, имеющий меньшую среднеквадратичную ошибку. Вторая компонента характеризует \emph{смещение} (\emph{bias}) метода обучения, то есть отклонение среднего ответа обученного алгоритма от ответа идеального алгоритма. Третья компонента характеризует \emph{дисперсию} (\emph{variance}), то есть разброс ответов обученных алгоритмов относительно среднего ответа.
-
-
-
-
-
-\end{document}
